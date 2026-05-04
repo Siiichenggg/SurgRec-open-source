@@ -1,0 +1,70 @@
+{
+  "datasets": [
+    "AlxSuture",
+    "AutoLaparo",
+    "cat-21",
+    "cataract-101",
+    "cataract-1k-phase",
+    "cholec80",
+    "Colonoscopic-web",
+    "hyper-kvasir",
+    "kvasir-capsule",
+    "LapGyn_dataset",
+    "LDPolyVideo",
+    "M2CAI16-Workflow",
+    "MultiBypass140",
+    "PitVis",
+    "SAR-RARP50",
+    "SurgicalActions160"
+  ],
+  "models": [
+    {
+      "name": "dinov3_vitl16_pretrain",
+      "script_tag": "finetune_dinov3_vitl16_pretrain",
+      "pretrain_ckpt": "checkpoints/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth",
+      "model_name": "vit_large_patch16_224"
+    },
+    {
+      "name": "videomae_e149",
+      "script_tag": "finetune_videomae_e149",
+      "pretrain_ckpt": "checkpoints/videomae_e149.pth",
+      "model_name": "vit_base_patch16_224"
+    },
+    {
+      "name": "videomae_b",
+      "script_tag": "finetune_videomae_b",
+      "pretrain_ckpt": "checkpoints/videomae_b.pth",
+      "model_name": "vit_base_patch16_224"
+    },
+    {
+      "name": "jepa_v3_60w",
+      "script_tag": "finetune_jepa_v3_60w",
+      "pretrain_ckpt": "checkpoints/jepa_v3_60w_100e_20w_130e.pt",
+      "model_name": "vit_large_patch16_224"
+    },
+    {
+      "name": "jepa_vitl16",
+      "script_tag": "finetune_jepa_vitl16",
+      "pretrain_ckpt": "checkpoints/vitl16.pth.tar",
+      "model_name": "vit_large_patch16_224"
+    },
+    {
+      "name": "dinov3_vitl16_surgenetxl",
+      "script_tag": "finetune_DINOv3_ViTl16_SurgeNetXL",
+      "pretrain_ckpt": "checkpoints/DINOv3_ViTl16_size336_SurgeNetXL.pth",
+      "model_name": "vit_large_patch16_224"
+    },
+    {
+      "name": "surgrec_mae",
+      "script_tag": "finetune_surgrec_mae",
+      "pretrain_ckpt": "checkpoints/surgrec_mae.pth",
+      "model_name": "vit_base_patch16_224"
+    },
+    {
+      "name": "surgrec_jepa",
+      "script_tag": "finetune_surgrec_jepa",
+      "pretrain_ckpt": "checkpoints/surgrec_jepa.pt",
+      "model_name": "vit_large_patch16_224"
+    }
+  ]
+}

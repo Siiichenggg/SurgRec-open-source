@@ -1,0 +1,7 @@
+License: research-use pre-release placeholder
+
+This scaffold is prepared for public release of SurgRec. Before publishing, replace this file with the final license approved by all authors and institutions.
+
+Because parts of this codebase are adapted from VideoMAE-style implementations that are distributed for non-commercial research use, do not assume commercial use is permitted unless license compatibility has been reviewed.
+
+Third-party components retain their original licenses. See NOTICE.

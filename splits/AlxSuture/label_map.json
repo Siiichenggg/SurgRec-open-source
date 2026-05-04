@@ -1,0 +1,14 @@
+{
+  "index_to_label": {
+    "0": "beginner",
+    "1": "intermediate",
+    "2": "expert"
+  },
+  "label_to_index": {
+    "beginner": 0,
+    "expert": 2,
+    "intermediate": 1,
+    "novice": 0,
+    "proficient": 2
+  }
+}

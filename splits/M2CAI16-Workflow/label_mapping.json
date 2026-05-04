@@ -1,0 +1,24 @@
+{
+  "label_to_index": {
+    "CalotTriangleDissection": 0,
+    "CleaningCoagulation": 1,
+    "ClippingCutting": 2,
+    "GallbladderDissection": 3,
+    "GallbladderPackaging": 4,
+    "GallbladderRetraction": 5,
+    "Phase": 6,
+    "Preparation": 7,
+    "TrocarPlacement": 8
+  },
+  "index_to_label": {
+    "0": "CalotTriangleDissection",
+    "1": "CleaningCoagulation",
+    "2": "ClippingCutting",
+    "3": "GallbladderDissection",
+    "4": "GallbladderPackaging",
+    "5": "GallbladderRetraction",
+    "6": "Phase",
+    "7": "Preparation",
+    "8": "TrocarPlacement"
+  }
+}

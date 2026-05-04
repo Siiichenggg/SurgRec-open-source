@@ -1,0 +1,11 @@
+SurgRec includes or adapts code patterns from the following projects. Verify exact license obligations before public release:
+
+- VideoMAE / VideoMAE V2
+- PyTorch and torchvision
+- timm
+- decord
+- DeepSpeed
+- Hugging Face Transformers
+- LLaVA-NeXT and Qwen-VL model tooling when used for VLM evaluation
+
+Raw datasets and checkpoints are not included in this repository scaffold.

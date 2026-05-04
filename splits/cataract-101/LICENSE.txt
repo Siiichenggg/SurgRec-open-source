@@ -1,0 +1,8 @@
+Cataract-101 is licensed under Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0, https://creativecommons.org/licenses/by-nc/4.0/) and is created as well as maintained by the Multimedia Systems Group of the Institute of Information Technology (ITEC) at Alpen-Adria Universität in Klagenfurt, Austria.
+        
+This license allows users of this dataset to copy, distribute and transmit the work under the following conditions:
+- Attribution: You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+- Non-Commercial: You may not use the material for commercial purposes.
+
+For further legal details, please read the complete license terms here:
+https://creativecommons.org/licenses/by-nc/4.0/legalcode

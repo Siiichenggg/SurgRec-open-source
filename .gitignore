@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.venv/
+venv/
+env/
+miniconda3/
+.conda/
+
+# Data and generated artifacts
+data/raw/
+data/videos/
+data/splits_local/
+outputs/
+output*/
+log/
+logs/
+runs/
+wandb/
+*.log
+*.out
+*.err
+*.tfevents.*
+
+# Checkpoints and model weights
+/checkpoints/
+/model/
+/models/
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.tar
+*.pkl
+
+# Media and large files
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+*.npy
+*.npz
+*.h5
+*.hdf5
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,14 @@
+{
+  "anterior_chamber_flushing": 0,
+  "capsule_pulishing": 1,
+  "capsulorhexis": 2,
+  "hydrodissection": 3,
+  "incision": 4,
+  "irrigation-aspiration": 5,
+  "lens_implantation": 6,
+  "lens_positioning": 7,
+  "phacoemulsification": 8,
+  "tonifying-antibiotics": 9,
+  "viscoelastic": 10,
+  "viscoelastic_suction": 11
+}

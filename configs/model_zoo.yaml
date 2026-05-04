@@ -1,0 +1,29 @@
+models:
+  surgrec_mae:
+    backbone: vit_base_patch16_224
+    checkpoint: checkpoints/surgrec_mae.pth
+    release_filename_hint: videomae_e149.pth
+    status: release_checkpoint_required
+  surgrec_jepa:
+    backbone: vit_large_patch16_224
+    checkpoint: checkpoints/surgrec_jepa.pt
+    release_filename_hint: jepa_v3_60w_100e_20w_130e.pt
+    status: release_checkpoint_required
+  videomae_baseline:
+    backbone: vit_base_patch16_224
+    checkpoint: checkpoints/videomae.pth
+    release_filename_hint: videomae_b.pth
+    status: optional_baseline
+  jepa_vitl16_baseline:
+    backbone: vit_large_patch16_224
+    checkpoint: checkpoints/jepa_vitl16.pth.tar
+    release_filename_hint: vitl16.pth.tar
+    status: optional_baseline
+  dinov3_vitl16:
+    backbone: vit_large_patch16_224
+    checkpoint: checkpoints/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth
+    status: optional_baseline
+  dinov3_surgenetxl:
+    backbone: vit_large_patch16_224
+    checkpoint: checkpoints/DINOv3_ViTl16_size336_SurgeNetXL.pth
+    status: optional_baseline
