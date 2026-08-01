@@ -1,11 +1,68 @@
-SurgRec includes or adapts code patterns from the following projects. Verify exact license obligations before public release:
+SurgRec
+Copyright (c) 2026 Sicheng Lu, Zikai Xiao, Jianhui Wei, Danyu Sun, Qi Lu,
+Keli Hu, Yang Feng, Jian Wu, Zongxin Yang, Zuozhu Liu
 
-- VideoMAE / VideoMAE V2
-- PyTorch and torchvision
-- timm
-- decord
-- DeepSpeed
-- Hugging Face Transformers
-- LLaVA-NeXT and Qwen-VL model tooling when used for VLM evaluation
+SurgRec is licensed under CC BY-NC 4.0; see LICENSE. This file records the
+copyright holders, the third-party code the project builds on, and the terms
+covering checkpoints and datasets.
 
-Raw datasets and checkpoints are not included in this repository scaffold.
+WHY NON-COMMERCIAL
+
+Parts of this codebase are adapted from VideoMAE and VideoMAE V2, and the
+V-JEPA reference is CC BY-NC 4.0. That non-commercial obligation carries over,
+so a permissive license is not available for the repository as a whole.
+
+THIRD-PARTY CODE
+
+Licenses verified against each project's source. All are compatible with a
+non-commercial research release; none prohibits non-commercial redistribution.
+
+  VideoMAE               CC BY-NC 4.0   (the reason this repo is CC BY-NC)
+  VideoMAE V2            MIT
+  V-JEPA / JEPA          CC BY-NC 4.0
+  DINO                   Apache-2.0
+  timm                   Apache-2.0
+  decord                 Apache-2.0
+  DeepSpeed              Apache-2.0
+  Hugging Face Transformers   Apache-2.0
+  accelerate             Apache-2.0
+  qwen-vl-utils          Apache-2.0
+  synapseclient          Apache-2.0
+  einops                 MIT
+  tensorboardX           MIT
+  opencv-python          Apache-2.0 (core) / MIT (wrapper)
+  PyAV (av)              BSD-3-Clause
+  scikit-learn, scipy, pandas, Pillow, tqdm   BSD / permissive
+
+TWO DISTRIBUTION CAVEATS
+
+- PyAV (av): the pip wheels bundle GPLv3 FFmpeg. GPL does not cross a normal
+  `import`, so listing av in requirements.txt (users pip-install it themselves)
+  is fine. Do not vendor the wheel into a self-contained artifact (e.g. a Docker
+  image) without accepting GPLv3 on that artifact.
+- DINOv3: if you ever redistribute DINOv3-derived weights or code, the DINOv3
+  License must travel with those files and cannot be relicensed under CC BY-NC.
+  This repository does not redistribute DINOv3 weights (baselines are linked,
+  not shipped), so no DINOv3 files are covered by this release.
+
+CHECKPOINTS
+
+- The SurgRec backbones (to be released on the Hugging Face Hub) are covered by
+  this project's license (CC BY-NC 4.0).
+- Baseline checkpoints (DINOv3, V-JEPA, VideoMAE, DINOv3-SurgeNetXL) and the VLM
+  weights used for evaluation (Qwen2.5-VL, Qwen3-VL, LLaVA-NeXT) are not
+  redistributed here. Obtain them from their original sources and comply with
+  those licenses. Note some Qwen weights carry custom (Tongyi Qianwen / Qwen
+  Research) licenses distinct from the Apache-2.0 Qwen code.
+
+DATASETS
+
+Downstream datasets are governed by their own licenses; see DATASETS.md for the
+per-dataset table and attribution. `splits/` contains only split metadata
+(filenames + labels), never video content.
+
+NO WARRANTY
+
+This software is provided "as is", without warranty of any kind. It is a
+research artifact and is not a medical device. It must not be used for clinical
+diagnosis or treatment decisions.

@@ -3,13 +3,16 @@
 The public repository is organized around the supported user workflows.
 
 ```text
-surgrec_video/   Python package for video fine-tuning and pretraining
-scripts/         Shell entrypoints for training and VLM evaluation
+surgrec_video/   Python package for downstream video fine-tuning
+scripts/train/   General-purpose fine-tuning launcher
+scripts/paper/   The paper's own fine-tuning and test configurations
+scripts/eval/    VLM evaluation entrypoints
+scripts/benchmark/  Benchmark sweep launchers
 splits/          Lightweight train/val/test split metadata
 tools/           Data preparation, validation, and analysis helpers
 vlm_eval/        VLM baseline evaluation code
-configs/         Model registry and checkpoint placeholders
+configs/         Model registry mapping backbones to checkpoint filenames
 docs/            Additional release notes
 ```
 
-Historical experiment forks, generated outputs, local checkpoints, TensorBoard logs, and machine-specific launchers are intentionally excluded from the release tree.
+This release covers downstream fine-tuning, the benchmark, and VLM evaluation, and uses the released pretrained backbones. Generated outputs, local checkpoints, and TensorBoard logs are not tracked. The launchers under `scripts/paper/` are the ones actually used for the paper, rewritten so they no longer depend on the machine they ran on.

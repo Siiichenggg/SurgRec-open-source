@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      # torch and decord need a CUDA-matched install, so CI covers what can be
+      # checked without them: imports that do not touch the GPU stack, shell
+      # syntax, documented paths, and the sanitisation rules.
+      - name: Install test dependencies
+        run: pip install numpy pytest pyyaml
+
+      - name: Byte-compile every Python file
+        run: python -m compileall -q surgrec_video tools vlm_eval tests
+
+      - name: Run tests
+        run: python -m pytest tests -q
+
+      - name: Check shell scripts parse
+        run: |
+          fail=0
+          for f in $(find scripts -name '*.sh'); do
+            bash -n "$f" || { echo "syntax error: $f"; fail=1; }
+          done
+          exit $fail
+
+      - name: Validate config and citation metadata
+        run: |
+          python -c "import yaml; yaml.safe_load(open('configs/model_zoo.yaml'))"
+          python -c "import yaml; yaml.safe_load(open('CITATION.cff'))"
+
+      - name: Check documented paths exist
+        run: |
+          fail=0
+          for p in $(grep -rhoE '(surgrec_video|tools|scripts|vlm_eval|configs|docs|splits)/[A-Za-z0-9_/.-]+\.(py|sh|md|yaml|json)' --include='*.md' . | sort -u); do
+            [ -e "$p" ] || { echo "documented path does not exist: $p"; fail=1; }
+          done
+          exit $fail
+
+      - name: Check no machine-specific paths or credentials leaked
+        run: |
+          if grep -rInE '/rsch/|/mnt/data/zikai|10\.105\.100\.|hf_[A-Za-z0-9]{20}' \
+               --exclude-dir=.git --exclude-dir=.github . ; then
+            echo "machine-specific path or credential found"
+            exit 1
+          fi
+
+      - name: Check no large files are tracked
+        run: |
+          big=$(git ls-files | xargs -r du -k 2>/dev/null | awk '$1 > 5120 {print $2}')
+          if [ -n "$big" ]; then echo "files over 5 MB are tracked:"; echo "$big"; exit 1; fi

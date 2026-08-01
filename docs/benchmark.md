@@ -1,6 +1,20 @@
 # Paper Benchmark Reproduction
 
-The paper reports a 16-dataset downstream benchmark. `splits/` may contain auxiliary datasets such as PitVis, but the default benchmark scripts intentionally use only the paper matrix:
+## Reported Results
+
+The full per-dataset table (all baselines and both SurgRec variants, from
+Table 2 of the [paper](https://arxiv.org/abs/2603.29966)) is in the
+[Results section of the README](../README.md#results).
+
+SurgRec-MAE is the best method on 14 of 16 datasets and leads the mean Acc@1 by
+9.4 points over the strongest baseline. SurgRec-JEPA is close to the baseline
+envelope on the mean; it is the single best method on Cholec80 and ties
+SurgRec-MAE on M2CAI16. Cat-21 is saturated at one value across every method,
+which makes that row uninformative.
+
+## Datasets
+
+`splits/` may contain auxiliary datasets such as PitVis, but the default benchmark scripts intentionally use only the paper matrix:
 
 - AlxSuture
 - AutoLaparo

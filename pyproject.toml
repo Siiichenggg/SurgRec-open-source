@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "surgrec-video"
+version = "1.0.0"
+description = "Surgical video downstream fine-tuning and evaluation for SurgRec"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "CC-BY-NC-4.0" }
+authors = [
+  { name = "Sicheng Lu" },
+  { name = "Zikai Xiao" },
+  { name = "Jianhui Wei" },
+  { name = "Danyu Sun" },
+  { name = "Qi Lu" },
+  { name = "Keli Hu" },
+  { name = "Yang Feng" },
+  { name = "Jian Wu" },
+  { name = "Zongxin Yang" },
+  { name = "Zuozhu Liu" },
+]
+keywords = ["surgical-video", "foundation-model", "self-supervised-learning", "videomae", "jepa"]
+classifiers = [
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3.10",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+# Runtime dependencies are listed in requirements.txt. They are deliberately not
+# duplicated here: torch and decord need to match the local CUDA setup, so
+# installing them through this metadata would pull the wrong wheels.
+
+[project.urls]
+Paper = "https://arxiv.org/abs/2603.29966"
+Repository = "https://github.com/Siiichenggg/SurgRec-open-source"
+# Checkpoints = "..."  # added when the weights are published on the Hugging Face Hub
+
+[tool.setuptools.packages.find]
+include = ["surgrec_video*"]

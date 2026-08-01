@@ -4,7 +4,7 @@
 
 ## Internal Layout
 
-- `entrypoints/`: runnable Python module entrypoints for fine-tuning and pretraining.
+- `entrypoints/`: runnable Python module entrypoints for downstream fine-tuning.
 - `models/`: backbone definitions and checkpoint-compatible model builders.
 - `data/`: dataset builders and split readers.
 - `engine/`: training and evaluation loops.
@@ -22,4 +22,3 @@ Direct module entrypoints are available for debugging and smoke tests:
 
 - `python -m surgrec_video.entrypoints.run_class_finetuning_videomae ...`
 - `python -m surgrec_video.entrypoints.run_class_finetuning_medical ...`
-- `python -m surgrec_video.entrypoints.run_mae_pretraining ...`
