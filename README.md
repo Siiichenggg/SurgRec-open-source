@@ -10,8 +10,9 @@ This repository is the public release for **SurgRec**: downstream fine-tuning co
 > Paper: [Scaling Video Pretraining for Surgical Foundation Models](https://arxiv.org/abs/2603.29966) (arXiv:2603.29966)  
 > Checkpoints: [SichengLu/SurgRec](https://huggingface.co/SichengLu/SurgRec) on the Hugging Face Hub
 
-![Overview of the SurgRec pretraining and evaluation framework](assets/overview.jpg)
-
+<p align="center">
+  <img src="assets/overview.jpg" alt="Overview of the SurgRec pretraining and evaluation framework" width="720">
+</p>
 <p align="center"><em>Overview of the proposed surgical video pretraining and evaluation framework.</em></p>
 
 ## Highlights
