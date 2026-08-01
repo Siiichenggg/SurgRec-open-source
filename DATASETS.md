@@ -50,7 +50,7 @@ to how freely derived files may be shared.
 | SurgicalActions160 | CC BY-NC-SA 4.0 | open | OK; CSV inherits BY-NC-SA |
 | Cholec80 | CC BY-NC-SA 4.0 | request form | Allowed under BY-NC-SA; access is form-gated |
 | M2CAI16-Workflow | CC BY-NC-SA 4.0 | request form | Allowed under BY-NC-SA; access is form-gated |
-| AlxSuture | CC BY-NC-ND 4.0 | open (Zenodo) | With provider permission (see below) |
+| AIxSuture | CC BY-NC-ND 4.0 | open (Zenodo) | With provider permission (see below) |
 | JIGSAWS | custom (IRB release) | registration | With provider permission (see below) |
 | LDPolypVideo | none stated | open | With provider permission (see below) |
 
@@ -63,21 +63,25 @@ attribution to the source dataset.
 
 ### Splits redistributed with provider permission
 
-Three sources do not grant redistribution through an open license — AlxSuture is
+Three sources do not grant redistribution through an open license — AIxSuture is
 CC BY-NC-**ND** 4.0 (NoDerivatives), JIGSAWS is an IRB-approved registration-gated
 release, and LDPolypVideo ships with no license statement. The SurgRec authors
 obtained permission from the respective dataset providers to redistribute the
 derived split metadata (filenames + labels) for non-commercial research use.
-Downstream users must still obtain the underlying videos from each dataset's
-official source under its own terms.
+
+That permission was granted to the SurgRec authors for this release; it is not a
+sublicense and does not travel downstream under this repository's CC BY-NC 4.0.
+If you intend to redistribute these three manifests yourself, contact the
+original providers. Downstream users must in all cases obtain the underlying
+videos from each dataset's official source under its own terms.
 
 ## Attribution
 
 Please cite the original dataset papers alongside this work. Dataset homepages:
 
-- AlxSuture — https://zenodo.org/records/7940583
+- AIxSuture — https://zenodo.org/records/7940583
 - AutoLaparo — https://autolaparo.github.io
-- cat-21 / CATARACTS — http://ftp.itec.aau.at/datasets/ovid/cat-21/
+- cat-21 (Cataract-21, ITEC) — http://ftp.itec.aau.at/datasets/ovid/cat-21/
 - cataract-101 — http://ftp.itec.aau.at/datasets/ovid/cat-101/
 - cataract-1k — see paper PMC11014927 (Synapse record)
 - Cholec80 / M2CAI16 — https://camma.unistra.fr/datasets/
@@ -90,6 +94,11 @@ Please cite the original dataset papers alongside this work. Dataset homepages:
 - MultiBypass140 — https://github.com/CAMMA-public/MultiBypass140
 - SAR-RARP50 — https://rdr.ucl.ac.uk/articles/dataset/SAR-RARP50_train_set/24932529
 - SurgicalActions160 — https://ftp.itec.aau.at/datasets/SurgicalActions160/
+
+## Auxiliary splits
+
+`splits/` also contains PitVis, which is not part of the 16-dataset paper
+benchmark and has not been license-reviewed here. Check its terms before use.
 
 ## Privacy
 

@@ -6,17 +6,26 @@ The full per-dataset table (all baselines and both SurgRec variants, from
 Table 2 of the [paper](https://arxiv.org/abs/2603.29966)) is in the
 [Results section of the README](../README.md#results).
 
-SurgRec-MAE is the best method on 14 of 16 datasets and leads the mean Acc@1 by
-9.4 points over the strongest baseline. SurgRec-JEPA is close to the baseline
-envelope on the mean; it is the single best method on Cholec80 and ties
-SurgRec-MAE on M2CAI16. Cat-21 is saturated at one value across every method,
-which makes that row uninformative.
+SurgRec-MAE is strictly the best of the seven compared methods on 11 of the 16
+datasets and ties for best on 3 more (M2CAI16, SurgicalActions160, cat-21). It
+does not lead on cataract-1k, where JEPA is highest, or on Cholec80, where
+SurgRec-JEPA is. On the mean it is 9.4 points above the strongest other column
+(the SR-MAE without-balanced-sampling ablation, 35.92) and 11.3 points above the
+strongest third-party baseline (JEPA, 34.02).
+
+Every method scores exactly 15.69 on cat-21, consistent with all of them
+collapsing to a single class; we treat that row as uninformative rather than as
+evidence of parity.
+
+Two columns of the table cannot be rerun from this repository: the
+SR-MAE (w/o bal.) ablation and DINOv3-SurgeNetXL, neither of which is a released
+checkpoint.
 
 ## Datasets
 
 `splits/` may contain auxiliary datasets such as PitVis, but the default benchmark scripts intentionally use only the paper matrix:
 
-- AlxSuture
+- AIxSuture
 - AutoLaparo
 - cat-21
 - cataract-101
@@ -27,7 +36,7 @@ which makes that row uninformative.
 - JIGSAWS
 - kvasir-capsule
 - LapGyn_dataset
-- LDPolyVideo
+- LDPolypVideo
 - M2CAI16-Workflow
 - MultiBypass140
 - SAR-RARP50
