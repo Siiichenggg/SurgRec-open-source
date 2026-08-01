@@ -35,7 +35,7 @@ classifiers = [
 [project.urls]
 Paper = "https://arxiv.org/abs/2603.29966"
 Repository = "https://github.com/Siiichenggg/SurgRec-open-source"
-# Checkpoints = "..."  # added when the weights are published on the Hugging Face Hub
+Checkpoints = "https://huggingface.co/SichengLu/SurgRec"
 
 [tool.setuptools.packages.find]
 include = ["surgrec_video*"]

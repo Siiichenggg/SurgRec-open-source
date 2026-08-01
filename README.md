@@ -1,14 +1,14 @@
 # SurgRec: Scaling Video Pretraining for Surgical Foundation Models
 
 [![arXiv](https://img.shields.io/badge/arXiv-2603.29966-b31b1b.svg)](https://arxiv.org/abs/2603.29966)
-![Weights: coming soon](https://img.shields.io/badge/%F0%9F%A4%97%20Weights-coming%20soon-lightgrey)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-SurgRec-yellow)](https://huggingface.co/SichengLu/SurgRec)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 [![CI](https://github.com/Siiichenggg/SurgRec-open-source/actions/workflows/ci.yml/badge.svg)](https://github.com/Siiichenggg/SurgRec-open-source/actions/workflows/ci.yml)
 
 This repository is the public release for **SurgRec**: downstream fine-tuning code, the 16-dataset benchmark with consistent splits, VLM baseline evaluation, and the released pretrained backbones. It reproduces the paper's downstream results.
 
 > Paper: [Scaling Video Pretraining for Surgical Foundation Models](https://arxiv.org/abs/2603.29966) (arXiv:2603.29966)  
-> Checkpoints: coming soon — the SurgRec backbones will be released on the Hugging Face Hub.
+> Checkpoints: [SichengLu/SurgRec](https://huggingface.co/SichengLu/SurgRec) on the Hugging Face Hub
 
 ![Overview of the SurgRec pretraining and evaluation framework](assets/overview.jpg)
 
@@ -75,11 +75,10 @@ conda activate surgrec
 pip install -r requirements.txt
 ```
 
-Download the pretrained backbones (coming soon — see [Model Zoo](MODEL_ZOO.md)):
+Download the pretrained backbones:
 
 ```bash
-# Checkpoints will be released on the Hugging Face Hub; command added on release.
-# hf download <repo> --local-dir checkpoints
+hf download SichengLu/SurgRec --local-dir checkpoints
 ```
 
 Prepare dataset CSVs with local absolute video paths:
@@ -124,7 +123,7 @@ DATASET_ROOT=data/splits_local MODEL_ROOT=/path/to/vlm_checkpoints bash scripts/
 ## What Is Not Included
 
 - Raw clinical or web videos.
-- Baseline and third-party VLM weights — obtain those from their original sources. The two SurgRec backbones will be released on the Hugging Face Hub.
+- Baseline and third-party VLM weights — obtain those from their original sources. The two SurgRec backbones are on the [Hugging Face Hub](https://huggingface.co/SichengLu/SurgRec).
 - TensorBoard files, generated outputs, caches, or conda environments.
 - Historical experiment forks.
 - Private/internal datasets unless their licenses permit redistribution.

@@ -27,10 +27,8 @@ The `vlm_eval/` scripts require Hugging Face Transformers-compatible checkpoints
 
 ## Checkpoints
 
-Coming soon — the SurgRec backbones will be released on the Hugging Face Hub:
-
 ```bash
-# hf download <repo> --local-dir checkpoints
+hf download SichengLu/SurgRec --local-dir checkpoints
 ```
 
 ## Sanity Check
