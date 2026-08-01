@@ -34,7 +34,7 @@ classifiers = [
 
 [project.urls]
 Paper = "https://arxiv.org/abs/2603.29966"
-Repository = "https://github.com/Siiichenggg/SurgRec-open-source"
+Repository = "https://github.com/Siiichenggg/SurgRec"
 Checkpoints = "https://huggingface.co/SichengLu/SurgRec"
 
 [tool.setuptools.packages.find]

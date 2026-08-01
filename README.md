@@ -3,7 +3,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2603.29966-b31b1b.svg)](https://arxiv.org/abs/2603.29966)
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-SurgRec-yellow)](https://huggingface.co/SichengLu/SurgRec)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
-[![CI](https://github.com/Siiichenggg/SurgRec-open-source/actions/workflows/ci.yml/badge.svg)](https://github.com/Siiichenggg/SurgRec-open-source/actions/workflows/ci.yml)
+[![CI](https://github.com/Siiichenggg/SurgRec/actions/workflows/ci.yml/badge.svg)](https://github.com/Siiichenggg/SurgRec/actions/workflows/ci.yml)
 
 This repository is the public release for **SurgRec**: downstream fine-tuning code, the 16-dataset benchmark with consistent splits, VLM baseline evaluation, and the released pretrained backbones. It reproduces the paper's downstream results.
 
@@ -127,10 +127,6 @@ DATASET_ROOT=data/splits_local MODEL_ROOT=/path/to/vlm_checkpoints bash scripts/
 - TensorBoard files, generated outputs, caches, or conda environments.
 - Historical experiment forks.
 - Private/internal datasets unless their licenses permit redistribution.
-
-## Release Notes For Maintainers
-
-`RELEASE_CHECKLIST.md` tracks what remains: the final license decision, third-party license compatibility, and per-dataset redistribution terms for the splits.
 
 ## License
 
